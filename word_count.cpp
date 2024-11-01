@@ -12,6 +12,7 @@ int main() {
     cin.get(str, 100, '\n');
     for (int i = 0; i < strlen(str); i++) {
         if (str[i] != ' ' && (i == 0 || str[i - 1] == ' ')) {
+            count += 1;
         }
     }
     cout << "Word count: " << count << endl;
