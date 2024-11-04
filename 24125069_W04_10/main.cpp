@@ -98,6 +98,8 @@ void processFile(const char* inputFileName, const char* outputFileName, int prob
             }
             break;
         }
+        default: 
+            output << "Invalid problem number." << endl;
     }
 
     input.close();
