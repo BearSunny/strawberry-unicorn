@@ -1,0 +1,6 @@
+C thuộc hình chữ nhật.
+
+C không thuộc hình chữ nhật.
+
+C không thuộc hình chữ nhật.
+

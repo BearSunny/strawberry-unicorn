@@ -1,0 +1,2 @@
+Debug: Processing equation with coefficients 1, -5, 4
+Result: 1.00 4.00

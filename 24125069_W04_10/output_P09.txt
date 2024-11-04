@@ -1,0 +1,6 @@
+Result: 1.00 4.00
+
+Result: 0.25 1.00
+
+No real roots
+
