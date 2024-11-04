@@ -5,9 +5,7 @@
 using namespace std;
 
 void processFile(const char* inputFileName, const char* outputFileName, int problemNumber) {
-    cout << "Attempting to open input file: " << inputFileName << endl;
     ifstream input(inputFileName);
-
     if (!input.is_open()) {
         cerr << "Error: Could not open input file " << inputFileName << endl;
         return;
