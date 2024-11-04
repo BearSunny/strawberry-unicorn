@@ -118,7 +118,7 @@ int main() {
     int problemNumber;
     int fileIndex;
 
-    cout << "Enter the problem number to execute: ";
+    cout << "Enter the problem number to execute (1-10 corresponding to P01 to P27): ";
     cin >> problemNumber;
 
     cout << "Enter the input file number to open (1-10 corresponding to P01 to P27): ";
