@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
@@ -7,20 +6,21 @@ int main() {
     int decr_length = 1;
     int longest_length = 1;
 
-    vector<int> numbers;
+    int numbers[100];
+    int count = 0;
     cout << "Enter positive integers: ";
     while (true) {
         int num;
         cin >> num;
         if (num == 0) break;
-        numbers.push_back(num);
+        numbers[count++] = num;
     }
 
     int longest_sum = numbers[0];
     int incr_sum = numbers[0];
     int decr_sum = numbers[0];
 
-    for (int i = 1; i < numbers.size(); i++) {
+    for (int i = 1; i <= count; i++) {
         if (numbers[i] > numbers[i - 1]) {
             incr_length += 1;
             incr_sum += numbers[i];
