@@ -44,17 +44,18 @@ int extractEven(int num) {
 
 int main() {
     int num;
-    vector<int> numbers;
+    int numbers[100];
+    int count = 0;
     int totalSum = 0;
 
     cout << "Enter positive integers: ";
     while (true) {
         cin >> num;
         if (num == 0) break;
-        numbers.push_back(num);
+        numbers[count++] = num;
     }
 
-    for (int i = 0; i < numbers.size(); i++) {
+    for (int i = 0; i < count; i++) {
         if ((i + 1) % 2 != 0) {
             totalSum += extractOdd(numbers[i]);
         }
