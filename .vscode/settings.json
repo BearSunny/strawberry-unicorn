@@ -2,6 +2,7 @@
     "python.REPL.enableREPLSmartSend": false,
     "files.associations": {
         "iomanip": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
