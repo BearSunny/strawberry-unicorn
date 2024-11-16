@@ -6,7 +6,6 @@ using namespace std;
 
 int main() {
     char str[100];
-    vector<string> count_string;
     int count = 0;
     cout << "Enter a string: ";
     cin.get(str, 100, '\n');

@@ -26,7 +26,7 @@ int main() {
     cin >> x >> n;
 
     for (int i = 1; i <= n; i++) {
-        term *= x * x; // x^(2i)
+        term *= x * x; // x^(2n)
         sum += term;
     }
     cout << fixed << setprecision(2) << sum << endl;
