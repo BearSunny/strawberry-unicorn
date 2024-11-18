@@ -21,6 +21,7 @@ Node* insertNode(Node*& head, int num) {
         }
         cur -> next = newNode;
     }
+    return head;
 }
 
 Node* insertAtBeginning(Node*& head, int num) {
@@ -29,6 +30,7 @@ Node* insertAtBeginning(Node*& head, int num) {
     newNode -> next = head;
 
     head = newNode;
+    return head;
 }
 
 Node* insertAfterK(Node*& head, int num, int key) {
@@ -84,7 +86,7 @@ Node* insertBeforeK(Node*& head, int num, int key) {
     return head;
 }
 
-Node* displayNode(Node*& head) {
+void displayNode(Node* head) {
     Node* cur = head;
     while (cur != nullptr) {
         cout << cur -> val << " ";
@@ -93,7 +95,7 @@ Node* displayNode(Node*& head) {
     cout << endl;
 }
 
-Node* deleteAllNodes(Node*& head) {
+void deleteAllNodes(Node*& head) {
     Node* cur = head;
     while (cur != nullptr) {
         Node* temp = cur -> next;
@@ -145,3 +147,33 @@ Node* removeNthFromEnd(Node* head, int N) {
     delete nodeToDelete;
     return head;
 }
+
+Node* removeDuplicates(Node*& head) {
+    Node* cur = head;
+    while (cur != nullptr && cur -> next != nullptr) {
+        if (cur -> val == cur -> next -> val) {
+            Node* temp = cur -> next;
+            cur -> next = cur -> next -> next;
+            delete temp;
+        } else {
+            cur = cur -> next;
+        }
+    }
+    return head;
+}
+
+
+int main() {
+    Node* head = nullptr;
+    insertNode(head, 1);
+    insertNode(head, 1);
+    insertNode(head, 2);
+
+    removeDuplicates(head);
+    cout << "Linked list without duplicates: ";
+    displayNode(head);
+
+    deleteAllNodes(head);
+} 
+
+// valgrind --leak-check=full ./linked_list
